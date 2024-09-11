@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std ;
+
+int main () {
+int dig , suma1 , suma2 ;
+cin >> dig ;
+int boletos [ dig ];
+for (int i = 0; i < dig ; ++ i ) {
+
+    cin >> boletos [ i ];
+    }
+for (int i = 0; i < ( dig /2) ; ++ i ) {
+    suma1 += boletos [ i ];
+    }
+for (int i = ( dig /2) ; i < dig ; ++ i ) {
+    suma2 += boletos [ i ];
+    }
+if (( dig % 2) == 0) {
+    if ( suma1 == suma2 ) {
+        cout << suma1 << " 1" << endl ;
+        }
+    if( suma1 != suma2 ) {
+        cout << ( suma1 + suma2 ) << " 0" << endl ;
+        }
+    }
+else {
+    cout << ( suma1 + suma2 ) << " 0" << endl ;
+    }
+}
